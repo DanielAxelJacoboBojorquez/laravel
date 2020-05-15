@@ -3,9 +3,9 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-12">
             <div class="card">
-                <div class="card-header">Dashboard</div>
+                <div class="card-header"><h1>DASHBOARD</h1></div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -16,7 +16,9 @@
 
                     <div class="card">
                         <div class="card-header border-transparent">
-                        <h3 class="card-title">List of Programming Languages</h3>
+                        <h2 class="card-title">List of Programming Languages
+                            <button class="ml-4 btn btn-sm btn-success"></button>
+                        </h2>
 
                         <div class="card-tools">
                             <button type="button" class="btn btn-tool" data-card-widget="collapse">
