@@ -58,7 +58,7 @@
                 </button>
             </div>
         <div class="modal-body">
-        <form action="{{route('home')}}" method="POST">
+        <form action="{{route('home.store')}}" method="POST" enctype="multipart/form-data">
         {{ csrf_field()}}
             <div class="form-group">
                 <label for="title" class="col-form-label">Title:</label>

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\AddLanguage;
 
 class HomeController extends Controller
 {
@@ -27,6 +28,18 @@ class HomeController extends Controller
     }
 
     public function store(Request $request){
-        dd($request->all());
+        $new_addlanguage = new AddLanguage();
+
+        $file = $request->file('image');
+        $random_name = time();
+        $destinationPath = 'images/languages/';
+        $extension = $file->getClientOriginalExtension();
+        $filename = $random_name.'-'.$file->getClientOriginalName();
+        $uploadSuccess = $request->file('image')->move($destinationPath, $filename);
+
+        $new_addlanguage->title = $request->title;
+        $new_addlanguage->description = $request->description;
+        $new_addlanguage->image = $filename;
+        $new_addlanguage->save();
     }
 }
