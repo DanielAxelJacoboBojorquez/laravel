@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card">
-                <div class="card-header"><h1>DASHBOARD</h1></div>
+                <div class="card-header text-center "><h1>DASHBOARD</h1></div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -17,7 +17,7 @@
                     <div class="card">
                         <div class="card-header border-transparent">
                         <h2 class="card-title">List of Programming Languages
-                            <button class="ml-4 btn btn-sm btn-success"></button>
+                            <button class="ml-4 btn btn-sm btn-success">Add</button>
                         </h2>
 
                         <div class="card-tools">
