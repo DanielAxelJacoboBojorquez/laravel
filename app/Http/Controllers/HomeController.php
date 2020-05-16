@@ -49,14 +49,14 @@ class HomeController extends Controller
         return redirect()->route('home'); 
     }
 
-    public function edit($Id)
+    public function edit($languageId)
     {
-        $language = Language::find($Id);
+        $language = Language::find($languageId);
         return view('home.edit', ['language' => $language]);
     }
 
-    public function update(Request $request, $Id) {
-        $language = Language::find($Id);
+    public function update(Request $request, $languageId) {
+        $language = Language::find($languageId);
     
         $rules = [
             'title' => 'required|',
