@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateAddLanguagesTable extends Migration
+class CreateLanguagesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateAddLanguagesTable extends Migration
      */
     public function up()
     {
-        Schema::create('add_languages', function (Blueprint $table) {
+        Schema::create('languages', function (Blueprint $table) {
             $table->id();
             $table->text('title');
             $table->text('image');
@@ -29,6 +29,6 @@ class CreateAddLanguagesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('add_languages');
+        Schema::dropIfExists('languages');
     }
 }
