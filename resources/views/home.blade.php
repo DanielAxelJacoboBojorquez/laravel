@@ -33,15 +33,27 @@
                     <div class="card-body p-0">
                         <div class="table-responsive">
                             <table class="table m-0">
-                            <thead>
-                            <tr>
-                                <th>Title</th>
-                                <th>Image</th>
-                                <th>Description</th> 
-                                <th>Actions</th>
-                            </tr>
-                        </thead>
-                    <tbody>
+                                <thead>
+                                    <tr>
+                                        <th>Title</th>
+                                        <th>Image</th>
+                                        <th>Description</th> 
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach ($languages as $language)
+                                        <tr>
+                                            <td>{{ $language->title }}</td>
+                                            <td>{{ $language->image }}</td>
+                                            <td>{{ $language->description }}</td>
+                                            <td>lol</td>
+                                        </tr>
+                                    @endforeach
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

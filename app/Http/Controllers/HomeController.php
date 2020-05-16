@@ -24,7 +24,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $languages = Language::all();
+        return view('home', ['languages' => $languages]);
     }
 
     public function store(Request $request)
