@@ -20,4 +20,5 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::post('/home/store', 'HomeController@store')->name('home.store');
 Route::get('/home/{languageId}/edit', 'HomeController@edit')->name('home.edit');
+Route::post('/home/{languageId}/update', 'HomeController@update')->name('home.update');
 

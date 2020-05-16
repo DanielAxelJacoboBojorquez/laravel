@@ -112,7 +112,7 @@
             <span aria-hidden="true">&times;</span>
             </button>
         </div>
-        <form action="{{route('home.store')}}" method="POST" enctype="multipart/form-data">
+        <form action="{{route('home.update', $language->id)}}" method="POST" enctype="multipart/form-data">
             {{ csrf_field() }}
             <div class="modal-body">
                     <div class="form-group">
@@ -132,7 +132,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="submit" class="btn btn-primary">Save</button>
+                <button type="submit" class="btn btn-primary">Update</button>
             </div>
         </form>
         </div>

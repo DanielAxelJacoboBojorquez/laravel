@@ -46,7 +46,7 @@
         <br>
         <div class="row">
             @foreach ($languages as $language)
-                <div class="class="col-xs-12 col-sm-6 col-md-4 text-center mt-5">
+                <div class="col-4 text-center mt-5">
                     <h2>{{$language->title}}</h2>
                     <img src="{{asset('images/'.$language->image)}}" class="img-fluid img-rounded" width="120px" alt="{{$language->title}}"><img src="" alt="">
                     <p class="text-justify">{{$language->description}}</p>
