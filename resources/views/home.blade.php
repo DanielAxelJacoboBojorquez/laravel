@@ -48,7 +48,7 @@
                                         <td>{{ $language->description }}</td>
                                         <td>
                                             <div class="row">
-                                                <a href="{{route('home.edit')}}" class="btn btn-warning" data-toggle="modal" data-target="#edit" data-whatever="@getbootstrap">Edit</a>
+                                                <a href="" class="btn btn-warning" data-toggle="modal" data-target="#edit" data-whatever="@getbootstrap">Edit</a>
                                                 <form action="">
                                                     <button class="btn btn-danger">Delete</button>
                                                 </form>
