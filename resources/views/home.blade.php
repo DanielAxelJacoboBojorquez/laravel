@@ -49,7 +49,9 @@
                                         <td>
                                             <div class="row">
                                                 <a href="{{route('home.edit', $language->id)}}" class="btn btn-warning" data-toggle="modal" data-target="#edit" data-whatever="@getbootstrap">Edit</a>
-                                                <form action="">
+                                                <form action="{{route('home.delete' , $language->id)}}" method="POST">
+                                                    {{ csrf_field() }}
+                                                    <input type="hidden" name="_method" value="delete"/>
                                                     <button class="btn btn-danger">Delete</button>
                                                 </form>
                                             </div>

@@ -88,4 +88,10 @@ class HomeController extends Controller
 
         return redirect()->route('home');
     }
+
+    public function delete(Request $request, $languageId) {
+        $language = Language::find($languageId);
+        $language->delete();
+        return redirect()->back();
+    }
 }
