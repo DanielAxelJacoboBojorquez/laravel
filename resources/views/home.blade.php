@@ -45,7 +45,7 @@
                                 @foreach ($languages as $language)
                                     <tr>
                                         <td>{{ $language->title }}</td>
-                                        <td><img src="{{asset('images/'.$language->image)}}" width="120px" class="img-fluid img-rounded" alt="{{$language->title}}"></td>
+                                        <td><img src="{{asset('images/'.$language->image)}}" class="img-fluid img-rounded" width="120px" alt="{{$language->title}}"></td>
                                         <td>{{ $language->description }}</td>
                                         <td>lol</td>
                                     </tr>
