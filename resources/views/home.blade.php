@@ -47,8 +47,8 @@
                                         <td><img src="{{asset('images/'.$language->image)}}" class="img-fluid img-rounded" width="120px" alt="{{$language->title}}"></td>
                                         <td>{{ $language->description }}</td>
                                         <td>
-                                            <div class="col">
-                                                <a href="" class="btn btn-warning" data-toggle="modal" data-target="#edit" data-whatever="@getbootstrap">Edit</a>
+                                            <div class="row">
+                                                <a href="{{route('home.edit')}}" class="btn btn-warning" data-toggle="modal" data-target="#edit" data-whatever="@getbootstrap">Edit</a>
                                                 <form action="">
                                                     <button class="btn btn-danger">Delete</button>
                                                 </form>
