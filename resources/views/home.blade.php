@@ -42,14 +42,14 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach ($languages as $language)
-                                        <tr>
-                                            <td>{{ $language->title }}</td>
-                                            <td>{{ $language->image }}</td>
-                                            <td>{{ $language->description }}</td>
-                                            <td>lol</td>
-                                        </tr>
-                                    @endforeach
+                                @foreach ($languages as $language)
+                                    <tr>
+                                        <td>{{ $language->title }}</td>
+                                        <td><img src="{{asset('images/'.$language->image)}}" width="120px" class="img-fluid img-rounded" alt="{{$language->title}}"></td>
+                                        <td>{{ $language->description }}</td>
+                                        <td>lol</td>
+                                    </tr>
+                                @endforeach
                                 </tbody>
                             </table>
                         </div>
