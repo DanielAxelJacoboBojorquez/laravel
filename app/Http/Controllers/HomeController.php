@@ -29,12 +29,7 @@ class HomeController extends Controller
         return view('home', ['languages' => $languages]);
     }
 
-    public function edit($languageId)
-    {
-        $language = Language::find($languageId);
-        return view('home.edit', ['language' => $language]);
-    }
-
+  
     public function store(Request $request)
     {
         $new_language = new Language();
@@ -54,8 +49,14 @@ class HomeController extends Controller
         return redirect()->route('home'); 
     }
 
-    public function update(Request $request, $languageId) {
-        $language = Language::find($languageId);
+    public function edit($Id)
+    {
+        $language = Language::find($Id);
+        return view('home.edit', ['language' => $language]);
+    }
+
+    public function update(Request $request, $Id) {
+        $language = Language::find($Id);
     
         $rules = [
             'title' => 'required|',
