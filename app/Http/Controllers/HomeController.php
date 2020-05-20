@@ -52,7 +52,7 @@ class HomeController extends Controller
     public function edit($languageId)
     {
         $language = Language::find($languageId);
-        return view('home.edit', ['language' => $language]);
+        return view('edit', ['language' => $language]);
     }
 
     public function update(Request $request, $languageId) {
