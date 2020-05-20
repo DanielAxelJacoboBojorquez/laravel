@@ -48,7 +48,7 @@
                                         <td>{{ $language->description }}</td>
                                         <td>
                                             <div class="row">
-                                                <form action="{{route('home.edit' , $language->id)}}" method="POST">
+                                                <form action="{{route('home.edit' , $language->id)}}" method="GET">
                                                     {{ csrf_field() }}
                                                     <button class="btn btn-warning" data-toggle="modal" data-target="#edit" data-whatever="@getbootstrap">Edit</button>
                                                 </form>
