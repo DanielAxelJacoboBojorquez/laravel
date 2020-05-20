@@ -48,10 +48,7 @@
                                         <td>{{ $language->description }}</td>
                                         <td>
                                             <div class="row">
-                                                <form action="{{route('home.edit' , $language->id)}}" method="GET">
-                                                    {{ csrf_field() }}
-                                                    <button class="btn btn-warning" data-toggle="modal" data-target="#edit" data-whatever="@getbootstrap">Edit</button>
-                                                </form>
+                                                <a href="{{route('home.edit', $language->id)}}" class="btn btn-warning" data-toggle="modal" data-target="#edit" data-whatever="@getbootstrap">Edit</a>
                                                 <form action="{{route('home.delete' , $language->id)}}" method="POST">
                                                     {{ csrf_field() }}
                                                     <input type="hidden" name="_method" value="delete"/>
