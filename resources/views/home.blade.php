@@ -48,7 +48,7 @@
                                         <td>{{ $language->description }}</td>
                                         <td>
                                             <div class="row">
-                                                <a href="#" class="btn btn-warning edit">Edit</a>
+                                                <a href="{{route('home.edit', $language->id)}}" class="btn btn-warning" data-toggle="modal" data-target="#edit" data-whatever="@getbootstrap">Edit</a>
                                                 <form action="{{route('home.delete' , $language->id)}}" method="POST">
                                                     {{ csrf_field() }}
                                                     <input type="hidden" name="_method" value="delete"/>
@@ -105,7 +105,7 @@
 <!-- /.modal -->
 
 <!-- modal Edit-->
-<div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="edit" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
         <div class="modal-header">
@@ -114,7 +114,7 @@
             <span aria-hidden="true">&times;</span>
             </button>
         </div>
-        <form action="{{route('home.update', $language->id)}}" id="editForm" method="POST" enctype="multipart/form-data">
+        <form action="{{route('home.update', $language->id)}}" method="POST" enctype="multipart/form-data">
             {{ csrf_field() }}
             <div class="modal-body">
                     <div class="form-group">

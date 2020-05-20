@@ -16,8 +16,6 @@
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
-    <link href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css" rel="stylesheet">
-
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
@@ -78,27 +76,5 @@
             @yield('content')
         </main>
     </div>
-
-    <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function (){
-            var table = $('#datatable').DataTable();
-            table.on('click', '.edit', function (){
-                $tr = $(this).closest('tr');
-                if($($tr).hasClass('child')){
-                    $tr = $tr.prev('parent');
-                }
-
-                var data = table.row($tr).data();
-
-                $('#title').val(data[1]);
-                $('#image').val(data[2]);
-                $('#description').val(data[3]);
-                $('#editForm').attr('action', '{{route('home.update', $language->id)}}'+data[0]);
-                $('#editModal').modal('show');
-            });
-        });
-    </script>
 </body>
 </html>
