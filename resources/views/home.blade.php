@@ -48,7 +48,7 @@
                                         <td>{{ $language->description }}</td>
                                         <td>
                                             <div class="row">
-                                                <a href="{{route('home.edit', $language->id)}}" class="btn btn-warning">Edit</a>
+                                                <a href="{{route('edit', $language->id)}}" class="btn btn-warning">Edit</a>
                                                 <form action="{{route('home.delete' , $language->id)}}" method="POST">
                                                     {{ csrf_field() }}
                                                     <input type="hidden" name="_method" value="delete"/>
